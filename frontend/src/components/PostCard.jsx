@@ -46,7 +46,7 @@ function PostCard({ post, loadPosts }) {
 
       {post.image && (
         <img
-          src={`http://localhost:5000/uploads/${post.image}`}
+          src={`https://backend-eekt.onrender.com/uploads/${post.image}`}
           alt=""
         />
       )}
