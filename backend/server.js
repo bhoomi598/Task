@@ -15,13 +15,15 @@ app.use(express.json());
 
 app.use("/uploads", express.static("uploads"));
 
+const PORT = process.env.PORT || 5000;
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB Connected");
 
-    app.listen(process.env.PORT, () => {
-      console.log("Server Running");
+    app.listen(PORT, () => {
+      console.log(`Server running on ${PORT}`);
     });
   })
   .catch((err) => console.log(err));
